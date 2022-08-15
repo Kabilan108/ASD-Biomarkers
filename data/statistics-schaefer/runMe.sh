@@ -1,7 +1,12 @@
 #!/bin/bash
 # sample: ./runMe.sh 
 
-#* THIS SCRIPT WONT RUN WITHOUT CHECKING THE SYSTEM MAP FILE FIRST
+# t2 R0083_V0168_DTI_Schaefer2018_200_7Networks_connmat_sift2 Traceback (most recent call last):
+#   File "/home/kabil/Vault/ToolBox/yusuf/bctWrapper/scripts/bct_features.py", line 434, in <module>
+#     measure_matrix[i]=bct.edge_betweenness_wei(weightedConnectomes_length_norm[i])[1]/float((numNodes-1)*(numNodes-2)) #normalize the betwenness centrality. Note that, input being weightedConnectomes_length_norm or weightedConnectomes_length doesn't affect the output of this function, as expected
+#   File "/home/kabil/.anaconda3/envs/neuro/lib/python3.9/site-packages/bct/algorithms/centrality.py", line 330, in edge_betweenness_wei
+#     Q[:q], = np.where(np.isinf(D))  # these are first in line
+# ValueError: could not broadcast input array from shape (219,) into shape (218,)
 
 basepath=/home/kabil/Vault/Coursework/CS-T680/AutismCNN
 experimentPath=$basepath/data/statistics-schaefer
@@ -9,9 +14,9 @@ samplePath=$experimentPath/subjects.txt
 measuresList=$experimentPath/features.txt
 connectomesFolder=$basepath/data/CHARM/Schaefer200_sift2
 
-systemMaps=$basepath/data/11System_in_Desikan86.txt
-hemisphereMaps=$basepath/data/hemispheremap_Desikan86.txt
-numNodes=86
+systemMaps=$basepath/data/Schaefer2018_220Parcels_networks.txt
+hemisphereMaps=$basepath/data/hemispheremap_Schaefer220.txt
+numNodes=220
 
 bct_features_py=/home/kabil/Vault/ToolBox/yusuf/bctWrapper/scripts/bct_features.py
 
