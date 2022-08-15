@@ -1,11 +1,13 @@
 #!/bin/bash
 # sample: ./runMe.sh 
 
+#* THIS SCRIPT WONT RUN WITHOUT CHECKING THE SYSTEM MAP FILE FIRST
+
 basepath=/home/kabil/Vault/Coursework/CS-T680/AutismCNN
-experimentPath=$basepath/data/statistics-desikan
+experimentPath=$basepath/data/statistics-schaefer
 samplePath=$experimentPath/subjects.txt
 measuresList=$experimentPath/features.txt
-connectomesFolder=$basepath/data/CHARM/Desikan_sift2
+connectomesFolder=$basepath/data/CHARM/Schaefer200_sift2
 
 systemMaps=$basepath/data/11System_in_Desikan86.txt
 hemisphereMaps=$basepath/data/hemispheremap_Desikan86.txt
