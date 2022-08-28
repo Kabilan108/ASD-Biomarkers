@@ -1,0 +1,23 @@
+Measure	P Value	Adjusted P Value	Effect Size
+Assortativity	0.154	0.4235	-0.1612360645998082
+Characteristic Path Length	0.602	0.7645	-0.059007602487743
+Average Clustering Coefficient	0.375	0.7645	0.1006511151194521
+Average Degree	0.0105	0.05775	-0.2891103901419372
+Average Degree between Module	0.0183	0.08052	-0.266590170980601
+Average Interhemispheric Degree	0.00546	0.05775	-0.3147607339531507
+Average Intrahemispheric Degree	0.497	0.7645	-0.0761298672202679
+Average Degree within Module	1.89e-05	0.0004158	-0.488696834663073
+Density	0.0105	0.05775	-0.2891106472133721
+Diameter	0.735	0.77	-0.0383109001677135
+Average Eccentricity	0.614	0.7645	-0.0571338676303483
+Average Eigenvector Centrality	0.0498	0.1825999999999999	0.2225106183269287
+Global Efficiency	0.531	0.7645	0.0711390351494605
+Global Modularity	0.0899	0.2825428571428571	0.1923680606837652
+Average Node Betweenness Centrality	0.367	0.7645	0.1019565795086058
+Average Participation Coefficient	0.958	0.958	-0.0058822823042154
+Radius	0.671	0.7645	-0.0480353234304194
+Global strength	0.629	0.7645	0.0545370909421481
+Global Off-Diagonal strength	0.6	0.7645	0.0594501634451743
+Global Interhemispheric Strength	0.421	0.7645	-0.0911636000443292
+Global Intrahemispheric Strength	0.508	0.7645	0.0751060359601386
+Global Self Connections Strength	0.695	0.7645	0.0442581965877584
