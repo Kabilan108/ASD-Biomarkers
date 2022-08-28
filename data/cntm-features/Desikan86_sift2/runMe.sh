@@ -1,18 +1,19 @@
 #!/bin/bash
+# This assumes that directory paths are defined in $VAULT and $COURSEWORK
 # sample: ./runMe.sh 
 
-basepath=/home/kabil/Vault/Coursework/CS-T680/AutismCNN
-experimentPath=$basepath/data/statistics-desikan
-samplePath=$experimentPath/subjects.txt
+# Define paths
+basepath=$COURSEWORK/CS-T680/AutismCNN
+experimentPath=$basepath/data/cntm-features/Desikan86_sift2
+samplePath=$experimentPath/connectomes.txt
 measuresList=$experimentPath/features.txt
-connectomesFolder=$basepath/data/CHARM/Desikan_sift2
+connectomesFolder=$basepath/data/raw/CHARM/Desikan86_sift2
 
-systemMaps=$basepath/data/11System_in_Desikan86.txt
-hemisphereMaps=$basepath/data/hemispheremap_Desikan86.txt
+systemMaps=$basepath/data/atlas-maps/Desikan86_system_map.txt
+hemisphereMaps=$basepath/data/atlas-maps/Desikan86_hemisphere_map.txt
 numNodes=86
 
-bct_features_py=/home/kabil/Vault/ToolBox/yusuf/bctWrapper/scripts/bct_features.py
-
+bct_features_py=$VAULT/ToolBox/yusuf/bctWrapper/scripts/bct_features.py
 
 if [[ ! -e $measuresList ]]; then
 	python $bct_features_py --printFullMeasureList > $measuresList
@@ -22,7 +23,13 @@ fi
 
 mkdir -p $experimentPath/features
 
-# python $bct_features_py --measuresList $measuresList --connectomesFolder $connectomesFolder/ --subjectsList $samplePath --systemMaps $systemMaps --hemisphereMaps $hemisphereMaps --outputFolder $experimentPath/features/ --numNodes $numNodes --verbose --normalizeConnectomes none
-python $bct_features_py --measuresList $measuresList --connectomesFolder $connectomesFolder/ --subjectsList $samplePath --systemMaps $systemMaps --hemisphereMaps $hemisphereMaps --outputFolder $experimentPath/features/ --numNodes $numNodes --verbose --normalizeConnectomes maxEdge1_subject
-
-
+python $bct_features_py \
+	--measuresList $measuresList \
+	--connectomesFolder $connectomesFolder/ \
+	--subjectsList $samplePath \
+	--systemMaps $systemMaps \
+	--hemisphereMaps $hemisphereMaps \
+	--outputFolder $experimentPath/features/ \
+	--numNodes $numNodes \
+	--normalizeConnectomes maxEdge1_subject \
+	--verbose 
