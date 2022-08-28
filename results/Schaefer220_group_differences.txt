@@ -1,23 +1,23 @@
 Measure	P Value	Adjusted P Value	Effect Size
-Assortativity	0.818	0.995	-0.0261016361525027
-Characteristic Path Length	0.871	0.995	-0.018382858051996
-Average Clustering Coefficient	0.732	0.995	0.0389036338123261
-Average Degree	0.721	0.995	-0.0405030503184143
-Average Degree between Module	0.7	0.995	-0.0437150780989019
-Average Interhemispheric Degree	0.688	0.995	-0.0455743940105994
-Average Intrahemispheric Degree	0.948	0.995	-0.0073310751772324
-Average Degree within Module	0.947	0.995	0.0074786625497104
-Density	0.721	0.995	-0.0405063850213165
-Diameter	0.841	0.995	-0.0228167936584678
-Average Eccentricity	0.991	0.995	-0.0013256130626725
-Average Eigenvector Centrality	0.647	0.995	-0.0519160584419414
-Global Efficiency	0.956	0.995	0.0062676647704867
-Global Modularity	0.995	0.995	0.000652424774763692
-Average Node Betweenness Centrality	0.831	0.995	-0.0241539036528634
-Average Participation Coefficient	0.289	0.995	0.1203626007715501
-Radius	0.823	0.995	-0.0253919898923566
-Global strength	0.901	0.995	0.0141435861371688
-Global Off-Diagonal strength	0.967	0.995	-0.0047179327842123
-Global Interhemispheric Strength	0.692	0.995	-0.045112921015721
-Global Intrahemispheric Strength	0.989	0.995	0.0015104238092976
-Global Self Connections Strength	0.842	0.995	0.0226271870582173
+Assortativity	0.762	0.994	-0.0344433003984813
+Characteristic Path Length	0.895	0.994	-0.0149340831960822
+Average Clustering Coefficient	0.754	0.994	0.0356071790407191
+Average Degree	0.686	0.994	-0.0459112984237683
+Average Degree between Module	0.664	0.994	-0.0493391731500985
+Average Interhemispheric Degree	0.645	0.994	-0.0524346708469091
+Average Intrahemispheric Degree	0.96	0.994	-0.0056301347008344
+Average Degree within Module	0.961	0.994	0.0055596624594058
+Density	0.686	0.994	-0.045914425666067
+Diameter	0.846	0.994	-0.0222095146591414
+Average Eccentricity	0.994	0.994	-0.000800572402008214
+Average Eigenvector Centrality	0.617	0.994	-0.0567435725924728
+Global Efficiency	0.984	0.994	0.0022594147220538
+Global Modularity	0.98	0.994	0.0028186627009507
+Average Node Betweenness Centrality	0.823	0.994	-0.0253500183707866
+Average Participation Coefficient	0.273	0.994	0.1246780110782264
+Radius	0.822	0.994	-0.0256610501141879
+Global strength	0.967	0.994	0.0046960236851937
+Global Off-Diagonal strength	0.931	0.994	-0.0099291751298541
+Global Interhemispheric Strength	0.654	0.994	-0.0510970542470183
+Global Intrahemispheric Strength	0.976	0.994	-0.0034936861894742
+Global Self Connections Strength	0.895	0.994	0.0149696322867757
