@@ -3,10 +3,11 @@ Useful functions for this project.
 """
 
 # Imports
-import subprocess
-import pandas as pd
-
+from sklearn.metrics import roc_curve, auc
 from ToolBox.utils import tempdir
+import matplotlib.pyplot as plt
+import pandas as pd
+import subprocess
 
 
 RSCRIPT = "/home/kabil/.anaconda3/envs/R/bin/Rscript"
@@ -69,3 +70,31 @@ def compute_group_differences(data):
     subprocess.call(['rm', raw_path, out_path])
 
     return results
+
+
+def auc_roc_curve(clf, X_val, y_val, subtitle, path=None):
+    """
+    Plot ROC curve and return AUC given a prefit classifier and validation data
+    """
+
+    y_score = clf.decision_function(X_val)
+    fpr, tpr, _ = roc_curve(y_val, y_score)
+    roc_auc = auc(fpr, tpr)
+
+    fig, ax = plt.subplots(figsize=(6,4))
+    ax.plot(fpr, tpr, color='darkorange', lw=2,
+            label=f'ROC Curve (Area = {roc_auc:0.2f})')
+    ax.plot([0, 1], [0, 1], lw=2, linestyle='--', color='navy',
+            label='Random Guess')
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.0])
+    plt.xlabel("False Positive Rate")
+    plt.ylabel("True Positive Rate")
+    plt.title(f"Receiver Operating Characteristic Curve\n{subtitle}")
+    plt.legend(loc="lower right")
+    plt.show()
+
+    if path is not None:
+        fig.savefig(path)
+    
+    return roc_auc
