@@ -18,8 +18,10 @@ if __name__ == '__main__':
     demo = pd.read_csv('../data/CHARM/tobacco_demographics.csv')
 
     # Make lists of file IDs
-    des_ids = np.array([x[:11] for x in listdir('../data/CHARM/Desikan_sift2')])
-    sch_ids = np.array([x[:11] for x in listdir('../data/CHARM/Schaefer200_sift2')])
+    des_ids = np.array([x[:11]
+                       for x in listdir('../data/CHARM/Desikan_sift2')])
+    sch_ids = np.array([x[:11]
+                       for x in listdir('../data/CHARM/Schaefer200_sift2')])
 
     # Check that IDs are in both lists
     if (des_ids != sch_ids).all():
@@ -30,9 +32,9 @@ if __name__ == '__main__':
 
     # Trim demographics file
     demo = (demo[demo.Subject.isin(ids)]
-        .reset_index(drop=True)
-        .rename({'ados_css': 'ADOS', 'scq_total': 'SCQ', 'iq': 'IQ'}, axis=1)
-        .sort_values('Subject'))
+            .reset_index(drop=True)
+            .rename({'ados_css': 'ADOS', 'scq_total': 'SCQ', 'iq': 'IQ'}, axis=1)
+            .sort_values('Subject'))
 
     # Save trimmed demographics file
     demo.to_csv('../data/CHARM/demographics.tsv', index=False, sep='\t')

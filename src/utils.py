@@ -81,7 +81,7 @@ def auc_roc_curve(clf, X_val, y_val, subtitle, path=None):
     fpr, tpr, _ = roc_curve(y_val, y_score)
     roc_auc = auc(fpr, tpr)
 
-    fig, ax = plt.subplots(figsize=(6,4))
+    fig, ax = plt.subplots(figsize=(6, 4))
     ax.plot(fpr, tpr, color='darkorange', lw=2,
             label=f'ROC Curve (Area = {roc_auc:0.2f})')
     ax.plot([0, 1], [0, 1], lw=2, linestyle='--', color='navy',
@@ -96,5 +96,5 @@ def auc_roc_curve(clf, X_val, y_val, subtitle, path=None):
 
     if path is not None:
         fig.savefig(path)
-    
+
     return roc_auc
